@@ -273,11 +273,9 @@ let countries = [
     { "name": "Zimbabwe", "code": "ZW" }
 ];
 
-console.log({ countries });
-
 $$('#countries .list ul').html('');
 for (let i = 0; i < countries.length; i++) {
-    //console.log(countries[i].code.toLowerCase());
+
     $$('#countries .list ul').append(`
 <li>
 <div class="item-content">
@@ -286,7 +284,7 @@ for (let i = 0; i < countries.length; i++) {
     </div>
     <div class="item-inner">
         <div class="item-title">${countries[i].name}</div>
-        <div class="item-after">Stats</div>
+        <div class="item-after">${countries[i].code}</div>
     </div>
 </div>
 </li>
@@ -297,16 +295,15 @@ $$('.list li').on('click', function() {
     app.preloader.show();
 
     let country = $$(this).find('.item-title').text();
-    console.log({ country })
 
     let url = `https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search?search=${country}`
     app.request.get(url, function(res) {
         res = JSON.parse(res);
-        console.log({ res, type: res.data.rows });
+
         let val = res.data.rows[0];
 
         if (res.data.rows.length == 0) {
-            console.log('No data!');
+
             app.dialog.alert(`No data available`, `Covid-19 report for ${val.country}`)
             return;
         }
@@ -325,7 +322,7 @@ $$('.list li').on('click', function() {
                     <div class="sheet-modal-inner" style='overflow: scroll'>
                     <div class="block" >
                         <h5>Cases Overview : ${res.data.last_update}</h5>
-                        <h1><img src="${val.flag}" height="25vh" > ${val.country} : ${val.country_abbreviation.toLowerCase()}</h1>
+                        <h1><img src="${val.flag}" height="25vh" > ${val.country} : ${val.country_abbreviation}</h1>
                         
                             <div class='row'>
                                 <div class='col-33'>
@@ -352,20 +349,20 @@ $$('.list li').on('click', function() {
             // Events
             on: {
                 open: function(sheet) {
-                    console.log('Sheet open');
+                    //console.log('Sheet open');
                 },
                 opened: function(sheet) {
-                    console.log('Sheet opened');
+                    //console.log('Sheet opened');
                     app.preloader.hide();
                 },
             }
         });
         // Events also can be assigned on instance later
         dynamicSheet.on('close', function(sheet) {
-            console.log('Sheet close');
+            //console.log('Sheet close');
         });
         dynamicSheet.on('closed', function(sheet) {
-            console.log('Sheet closed');
+            //console.log('Sheet closed');
         });
 
         // Open dynamic sheet
