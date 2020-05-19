@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>COVID-19</title>
+    <!-- Path to Framework7 Library CSS -->
+    <!--link rel="stylesheet" href="./assets/css/framework7.min.css"-->
+    <link rel="stylesheet" href="./assets/css/framework7.md.min.css">
+    <link rel="stylesheet" href="./assets/css/framework7-icons.css">
+    <link href="./assets/css/flag-icon.min.css" rel="stylesheet">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./assets/css/my-app.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page color-theme-green">
+                <!-- start panel -->
+                <div class="panel panel-left panel-reveal">
+                    <div class='block'>
+                        <div class="list">
+                            <h3>COVID-19 STATS</h3>
+                            <ul>
+                                <li>
+                                    <a href="/about/" class="item-link item-content panel-close">
+                                        <div class="item-inner">
+                                            <div class="item-title">About app</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Search</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/timeline/" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Timeline</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end panel -->
+
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-inner sliding">
+
+                        <!--div class="left">
+                            <a class="panel-open" href="#"><i class="f7-icons">more_vertical_fill</i></a>
+                        </div-->
+                        <div class="title">COVID-19 STATS</div>
+                        <div class='right'>
+                            <a class="panel-open" href="#"><i class="f7-icons">bars</i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- end navbar -->
+                <div class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner" style='display:flex; justify-content:center;'>
+                        <h3 class=''>&copy; Miya Academy</h3>
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+
+                    <div class=''></div>
+
+                    <div id='countries' class='block'>
+                        <div class="list">
+                            <ul>
+
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media">
+                                            <span class="flag-icon flag-icon-gr"></span>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Country</div>
+                                            <div class="item-after">Stats</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class='block'>
+                        <div class='row no-gap'>
+                            <div class='col'>
+                                <h3>votre gaz est fini?</h5>
+                                    <p>
+                                        Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.
+                                    </p>
+                            </div>
+
+                            <div class='col'>
+                                <a href='#' class='link button button-fill ' id='command' style="height:150px;width:150px;border-radius: 50%;display: flex;justify-content: center;align-items: center;">Commandez</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='block'>
+                        <div class='row no-gap'>
+                            <div class='col'>
+                                <div class='gauge'></div>
+                            </div>
+
+                            <div class='col'>
+                                <h5>votre gaz est fini?</h5>
+                                <p>
+                                    Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--div class="card card-outline">
+                        <div class="card-header">Card header</div>
+                        <div class="card-content card-content-padding">Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.</div>
+                        <div class="card-footer">Card Footer</div>
+                    </div>
+
+                    <!--div class="toolbar toolbar-bottom-md">
+                        <div class="toolbar-inner">
+                            <a class="link">Link 1</a>
+                            <a class="link">Link 2</a>
+                            <a class="link">Link 3</a>
+                        </div>
+                    </div>
+                    <!-- Toolbar - ->
+                        <div class="toolbar toolbar-bottom-md">
+                            <div class="toolbar-inner ">
+                                <!-- Toolbar links - ->
+                                <a href="#" class="link">Link 1</a>
+                                <a href="#" class="link">Link 2</a>
+                            </div>
+                        </div>
+                        <!-- End Toolbar -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="./assets/js/framework7.min.js"></script>
+    <script type="text/javascript" src="./assets/js/dom7.min.js"></script>
+    <script type="text/javascript" src="./assets/js/template7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="./assets/js/my-app.js"></script>
+</body>
+
+</html>
