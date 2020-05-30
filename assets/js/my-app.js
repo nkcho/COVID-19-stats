@@ -65,7 +65,7 @@ app.request.get(url, function(res) {
             content: `<div class="sheet-modal">
                 <div class="toolbar">
                     <div class="toolbar-inner bg-color-green">
-                    <div class="left"></div>
+                    <div class="left">${countryData.Country} : ${countryData.CountryCode}</div>
                         <div class="right">
                         <a class="link sheet-close ">Close</a>
                         </div>
@@ -96,17 +96,17 @@ app.request.get(url, function(res) {
                         <div class='row'>
                                 <div class='col-33'>
                                     <h5>Confirmed Cases</h5>
-                                    <h1>${global.TotalConfirmed}</h1>
+                                    <h3>${global.TotalConfirmed}</h3>
                                 </div>
                                 
                                 <div class='col-33'>
                                     <h5>Recovered Cases</h5>
-                                    <h1>${global.TotalRecovered}</h1>
+                                    <h3>${global.TotalRecovered}</h3>
                                 </div>
                                 
                                 <div class='col-33'>
                                     <h5>Deaths</h5>
-                                    <h1>${global.TotalDeaths}</h1>
+                                    <h3>${global.TotalDeaths}</h3>
                                 </div>
                         </div>
 
